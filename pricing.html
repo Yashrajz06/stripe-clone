@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing & Fees | Stripe</title>
+  <meta name="description"
+    content="Simple, transparent pricing. Pay-as-you-go with no setup fees, no monthly fees, and no hidden fees.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="stripe-nav navbar navbar-expand-lg" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="stripe.png" width="60" alt="stripe logo">
+      </a>
+      <button class="navbar-toggler-mobile" type="button" id="mobileMenuOpen">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item nav-item-mega"><a class="nav-link" href="payments.html">Products <i
+                class="bi bi-chevron-down" style="font-size:10px"></i></a>
+            <div class="mega-menu">
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Payments</h6>
+                  <a href="payments.html" class="mega-menu-link"><span class="icon purple"><i
+                        class="bi bi-credit-card"></i></span>
+                    <div><strong>Payments</strong><small>Online payments</small></div>
+                  </a>
+                  <a href="payments.html" class="mega-menu-link"><span class="icon cyan"><i
+                        class="bi bi-link-45deg"></i></span>
+                    <div><strong>Payment Links</strong><small>No-code payments</small></div>
+                  </a>
+                  <a href="payments.html" class="mega-menu-link"><span class="icon purple"><i
+                        class="bi bi-cart-check"></i></span>
+                    <div><strong>Checkout</strong><small>Prebuilt payment UIs</small></div>
+                  </a>
+                  <a href="payments.html" class="mega-menu-link"><span class="icon blue"><i
+                        class="bi bi-shield-check"></i></span>
+                    <div><strong>Radar</strong><small>Fraud prevention</small></div>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <h6>Revenue &amp; Finance</h6>
+                  <a href="pricing.html" class="mega-menu-link"><span class="icon cyan"><i
+                        class="bi bi-receipt"></i></span>
+                    <div><strong>Billing</strong><small>Subscriptions &amp; invoicing</small></div>
+                  </a>
+                  <a href="pricing.html" class="mega-menu-link"><span class="icon purple"><i
+                        class="bi bi-graph-up"></i></span>
+                    <div><strong>Revenue Recognition</strong><small>Accounting automation</small></div>
+                  </a>
+                  <a href="payments.html" class="mega-menu-link"><span class="icon blue"><i
+                        class="bi bi-globe"></i></span>
+                    <div><strong>Connect</strong><small>Payments for platforms</small></div>
+                  </a>
+                  <a href="pricing.html" class="mega-menu-link"><span class="icon cyan"><i
+                        class="bi bi-calculator"></i></span>
+                    <div><strong>Tax</strong><small>Sales tax &amp; VAT automation</small></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Solutions <i class="bi bi-chevron-down"
+                style="font-size:10px"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="developers.html">Developers <i class="bi bi-chevron-down"
+                style="font-size:10px"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Resources <i class="bi bi-chevron-down"
+                style="font-size:10px"></i></a></li>
+          <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="signin.html" class="nav-cta-outline btn btn-sm">Sign in</a>
+          <a href="contact.html" class="nav-cta-filled btn btn-sm">Contact sales <i class="bi bi-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section style="background: #fff; padding: 140px 0 80px; position: relative; overflow: hidden;">
+    <div style="position:absolute;inset:0;background:linear-gradient(160deg,#f0f4ff 0%,#fff 55%,#fff 100%);z-index:0;">
+    </div>
+    <div
+      style="position:absolute;top:-80px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(99,91,255,0.1) 0%,transparent 70%);z-index:0;pointer-events:none;">
+    </div>
+    <div class="container text-center" style="position:relative;z-index:1;max-width:700px">
+      <span class="section-tag">Pricing</span>
+      <h1
+        style="font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:#0a2540;letter-spacing:-0.03em;line-height:1.15;margin-bottom:20px">
+        Simple, transparent pricing</h1>
+      <p style="font-size:1.2rem;color:#425466;max-width:560px;margin:0 auto 0">Pay-as-you-go pricing with no setup
+        fees, no monthly fees, and no hidden fees. Only pay for what you use.</p>
+    </div>
+  </section>
+
+
+  <!-- PRICING CARDS -->
+  <section class="section-padding" style="margin-top:-60px;position:relative;z-index:10">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4 fade-up">
+          <div class="pricing-card">
+            <h4>Integrated</h4>
+            <p style="color:var(--stripe-text-light);font-size:14px;min-height:44px">Optimised payments solution with
+              per-transaction pricing</p>
+            <div class="pricing-amount my-3">2.9% <span>+ 30¢</span></div>
+            <p style="font-size:13px;color:var(--stripe-text-light)">per successful card charge</p>
+            <a href="signup.html" class="btn-stripe w-100 mt-3 d-flex justify-content-center">Start now</a>
+            <ul class="pricing-features mt-3">
+              <li><i class="bi bi-check-circle-fill"></i> 135+ currencies</li>
+              <li><i class="bi bi-check-circle-fill"></i> Accept wallets & bank debits</li>
+              <li><i class="bi bi-check-circle-fill"></i> Optimised checkout</li>
+              <li><i class="bi bi-check-circle-fill"></i> Financial reporting</li>
+              <li><i class="bi bi-check-circle-fill"></i> Fraud prevention with Radar</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 fade-up">
+          <div class="pricing-card featured">
+            <h4>Customised</h4>
+            <p style="color:var(--stripe-text-light);font-size:14px;min-height:44px">For businesses with large payments
+              volume or unique business models</p>
+            <div class="pricing-amount my-3">Custom</div>
+            <p style="font-size:13px;color:var(--stripe-text-light)">volume discounts available</p>
+            <a href="contact.html" class="btn-stripe w-100 mt-3 d-flex justify-content-center">Contact sales</a>
+            <ul class="pricing-features mt-3">
+              <li><i class="bi bi-check-circle-fill"></i> Everything in Integrated</li>
+              <li><i class="bi bi-check-circle-fill"></i> Volume discounts</li>
+              <li><i class="bi bi-check-circle-fill"></i> Multi-product discounts</li>
+              <li><i class="bi bi-check-circle-fill"></i> Interchange++ pricing</li>
+              <li><i class="bi bi-check-circle-fill"></i> Dedicated support</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 fade-up">
+          <div class="pricing-card">
+            <h4>Connect</h4>
+            <p style="color:var(--stripe-text-light);font-size:14px;min-height:44px">For platforms and marketplaces that
+              need to manage multi-party payments</p>
+            <div class="pricing-amount my-3">0.25% <span>+ 25¢</span></div>
+            <p style="font-size:13px;color:var(--stripe-text-light)">per payout to third parties</p>
+            <a href="contact.html" class="btn-stripe w-100 mt-3 d-flex justify-content-center">Contact sales</a>
+            <ul class="pricing-features mt-3">
+              <li><i class="bi bi-check-circle-fill"></i> Multi-party payments</li>
+              <li><i class="bi bi-check-circle-fill"></i> Onboarding & verification</li>
+              <li><i class="bi bi-check-circle-fill"></i> Payouts in local currencies</li>
+              <li><i class="bi bi-check-circle-fill"></i> Platform controls</li>
+              <li><i class="bi bi-check-circle-fill"></i> 1099 tax reporting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL PAYMENTS -->
+  <section class="section-padding section-light" id="globalPayments">
+    <div class="container">
+      <div class="row align-items-start">
+        <!-- Left: Text Content -->
+        <div class="col-lg-5 fade-up">
+          <span class="section-tag">Global payments</span>
+          <h2 class="section-title" style="font-size:clamp(2rem,3.5vw,2.8rem);margin-bottom:20px">Expand to new markets
+            faster</h2>
+          <p style="font-size:1.05rem;color:#425466;line-height:1.7;margin-bottom:12px">Accept payments in over 135
+            currencies, with dozens of locally relevant payment methods. Stripe automatically optimises acceptance for
+            each region, and all of this is available through a single integration.</p>
+          <p style="font-size:1.05rem;color:#425466;line-height:1.7;margin-bottom:28px">Easily expand into new markets
+            with coverage in 195+ countries, and direct support for local payment methods like SEPA, iDEAL, and Alipay.
+          </p>
+          <a href="payments.html" class="gp-link">Start with global payments <i class="bi bi-arrow-right"></i></a>
+
+          <!-- Payment methods list -->
+          <div class="gp-methods-list" id="gpMethodsList">
+            <!-- Populated by JS based on active tab -->
+          </div>
+        </div>
+
+        <!-- Right: Interactive Payment Form -->
+        <div class="col-lg-7 fade-up">
+          <div class="gp-form-wrapper">
+            <!-- Country Tabs -->
+            <div class="gp-country-tabs" id="gpCountryTabs">
+              <button class="gp-tab active" data-country="us">United States</button>
+              <button class="gp-tab" data-country="de">Germany</button>
+              <button class="gp-tab" data-country="uk">United Kingdom</button>
+              <button class="gp-tab" data-country="cn">China</button>
+              <button class="gp-tab" data-country="mx">Mexico</button>
+            </div>
+
+            <!-- Payment Form Card -->
+            <div class="gp-form-card" id="gpFormCard">
+              <!-- Content injected by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5 fade-up">
+        <h2 class="section-title">Compare plans</h2>
+      </div>
+      <div class="table-responsive fade-up">
+        <table class="table comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Integrated</th>
+              <th>Customised</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Accept online payments</td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+            </tr>
+            <tr>
+              <td>135+ currencies</td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+            </tr>
+            <tr>
+              <td>Pre-built checkout</td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+            </tr>
+            <tr>
+              <td>Fraud prevention (Radar)</td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+            </tr>
+            <tr>
+              <td>Financial reporting</td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+            </tr>
+            <tr>
+              <td>Volume discounts</td>
+              <td><i class="bi bi-x-circle"></i></td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+            </tr>
+            <tr>
+              <td>Interchange++ pricing</td>
+              <td><i class="bi bi-x-circle"></i></td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+            </tr>
+            <tr>
+              <td>Dedicated support</td>
+              <td><i class="bi bi-x-circle"></i></td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+            </tr>
+            <tr>
+              <td>Custom migration support</td>
+              <td><i class="bi bi-x-circle"></i></td>
+              <td><i class="bi bi-check-circle-fill"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding section-light">
+    <div class="container" style="max-width:800px">
+      <div class="text-center mb-5 fade-up">
+        <h2 class="section-title">Frequently asked questions</h2>
+      </div>
+      <div class="accordion faq-accordion fade-up" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#faq1">Does Stripe charge setup or monthly fees?</button></h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">No. Stripe has no setup fees, no monthly fees, and no hidden fees. You only pay
+              per transaction — 2.9% + 30¢ per successful card charge. There are no contracts and you can cancel at any
+              time.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq2">When do I get paid?</button></h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Stripe sends payouts on a 2-day rolling basis. You can see your pending balance
+              and payout schedule in the Stripe Dashboard at any time. Instant payouts are also available for an
+              additional 1% fee.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq3">What currencies does Stripe support?</button></h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Stripe supports processing payments in 135+ currencies. This means your
+              customers can pay in their local currency while you receive funds in yours. Stripe automatically handles
+              currency conversion.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq4">Does Stripe work with my existing tools?</button></h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes. Stripe integrates with hundreds of third-party tools and platforms,
+              including Shopify, WooCommerce, WordPress, Squarespace, and many more. We also provide APIs for custom
+              integrations.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq5">How does Stripe handle security?</button></h2>
+          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Stripe is PCI DSS Level 1 certified — the most stringent level of certification
+              available. All card numbers are encrypted at rest with AES-256. Stripe also uses Radar, our machine
+              learning fraud prevention system.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq6">Can I get volume discounts?</button></h2>
+          <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes. If you process more than $100,000 per month, contact our sales team to
+              discuss custom pricing. We offer volume-based discounts and interchange++ pricing for qualifying
+              businesses.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq7">What are chargebacks and how does Stripe handle
+              them?</button></h2>
+          <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">A chargeback occurs when a customer disputes a charge with their bank. Stripe
+              charges a $15 fee per chargeback and provides tools to help you submit evidence. Radar helps prevent
+              fraudulent charges before they happen.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding section-dark text-center">
+    <div class="container fade-up">
+      <h2 class="section-title" style="color:#fff">Start building with Stripe today</h2>
+      <p style="color:rgba(255,255,255,0.6);max-width:480px;margin:0 auto 32px">Pay-as-you-go with no upfront costs.
+        Start in minutes.</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="signup.html" class="btn-stripe">Start now <i class="bi bi-arrow-right"></i></a>
+        <a href="contact.html" class="btn-stripe-outline">Contact sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="stripe-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-lg-2">
+          <h6>Products</h6>
+          <ul class="footer-links">
+            <li><a href="payments.html">Payments</a></li>
+            <li><a href="payments.html">Checkout</a></li>
+            <li><a href="pricing.html">Billing</a></li>
+            <li><a href="payments.html">Radar</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Solutions</h6>
+          <ul class="footer-links">
+            <li><a href="#">Enterprises</a></li>
+            <li><a href="#">Startups</a></li>
+            <li><a href="#">SaaS</a></li>
+            <li><a href="#">E-commerce</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Developers</h6>
+          <ul class="footer-links">
+            <li><a href="developers.html">Documentation</a></li>
+            <li><a href="developers.html">API Reference</a></li>
+            <li><a href="developers.html">API Status</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Resources</h6>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Guides</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Company</h6>
+          <ul class="footer-links">
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Account</h6>
+          <ul class="footer-links">
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+            <li><a href="signup.html">Start now</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stripe, Inc.</p>
+        <div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a class="navbar-brand" href="index.html">
+        <h3 class="fw-bold mb-0" style="color: var(--stripe-dark); letter-spacing: -1px;">stripe</h3>
+      </a>
+      <button class="mobile-close-btn" id="mobileCloseBtn">
+        <i class="bi bi-x"></i>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+    <a href="#" class="mobile-menu-item" data-bs-toggle="collapse" data-bs-target="#mobileProducts">Products <i class="bi bi-chevron-down"></i></a>
+    <div class="collapse" id="mobileProducts">
+      <div class="mobile-submenu">
+        <a href="payments.html">Payments</a>
+        <a href="payments.html">Payment Links</a>
+        <a href="payments.html">Checkout</a>
+        <a href="payments.html">Radar</a>
+        <a href="pricing.html">Billing</a>
+        <a href="payments.html">Connect</a>
+      </div>
+    </div>
+      <a href="#" class="mobile-menu-item">Solutions <i class="bi bi-chevron-right"></i></a>
+      <a href="developers.html" class="mobile-menu-item">Developers <i class="bi bi-chevron-right"></i></a>
+      <a href="#" class="mobile-menu-item">Resources <i class="bi bi-chevron-right"></i></a>
+      <a href="pricing.html" class="mobile-menu-item">Pricing <i class="bi bi-chevron-right"></i></a>
+      <a href="signin.html" class="mobile-menu-item">Sign in</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <a href="signup.html" class="mobile-btn-primary">Start now <i class="bi bi-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-btn-outline">Contact sales</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

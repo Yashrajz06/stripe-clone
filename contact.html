@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Sales | Stripe</title>
+  <meta name="description" content="Contact Stripe sales to learn about custom pricing, enterprise features, and how Stripe can help your business.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- MINIMAL NAVBAR -->
+<nav class="navbar navbar-expand-lg" style="position: absolute; top: 0; left: 0; width: 100%; z-index: 10; background: transparent; padding: 24px 0;">
+  <div class="container-fluid px-4 px-md-5">
+    <a class="navbar-brand" href="index.html">
+      <img src="stripe.png" width="65" alt="stripe logo">
+    </a>
+    <div class="ms-auto">
+      <a href="signup.html" style="color: #635bff; font-weight: 500; text-decoration: none; font-size: 14px;">Sign up <i class="bi bi-chevron-right" style="font-size: 11px;"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTACT PAGE WRAPPER -->
+<div class="contact-page-wrapper">
+  <!-- Background elements -->
+  <div class="bg-grid"></div>
+  <div class="bg-blob"></div>
+
+  <!-- Form Container -->
+  <div class="contact-form-container">
+    <div class="contact-form-card fade-up">
+      <form id="contactForm" novalidate>
+        
+        <!-- Progress Bar -->
+        <div class="step-progress">
+          <div class="step-item active" id="navStep1">
+            <span class="step-icon"></span> <span class="step-label">Your email</span>
+          </div>
+          <div class="step-item" id="navStep2">
+            <span class="step-icon"></span> <span class="step-label">Your info</span>
+          </div>
+        </div>
+
+        <!-- STEP 1 -->
+        <div class="form-step active" id="step1">
+          <h2 class="step-title">Let's get you to the right place</h2>
+          <p class="step-subtitle">We just need a few quick details.</p>
+
+          <div class="form-group row align-items-center mb-3">
+            <label for="contactEmail" class="col-sm-4 col-form-label">Work email</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control custom-input" id="contactEmail" required>
+            </div>
+          </div>
+          <div class="form-group row align-items-center mb-3">
+            <label for="contactCountry" class="col-sm-4 col-form-label">Country/Region</label>
+            <div class="col-sm-8">
+              <select class="form-select custom-select" id="contactCountry" required>
+                <option value="India" selected>India</option>
+                <option value="US">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="info-text mt-4">
+            <p>We're now available by invite only in India, and currently only supporting businesses with a focus on international expansion.</p>
+            <p>Please fill out this form, and we'll reach out to you if we're able to support you. If not, we'll be in touch when we're ready to open up access more broadly soon.</p>
+          </div>
+
+          <div class="d-flex justify-content-end mt-4">
+            <button type="button" class="btn-stripe-rounded" id="nextStep">Continue <i class="bi bi-chevron-right" style="font-size: 11px;"></i></button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="form-step" id="step2">
+          <div class="form-group row align-items-center mb-3">
+            <label for="contactFirstName" class="col-sm-4 col-form-label">First name</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control custom-input" id="contactFirstName" required>
+            </div>
+          </div>
+          <div class="form-group row align-items-center mb-3">
+            <label for="contactLastName" class="col-sm-4 col-form-label">Last name</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control custom-input" id="contactLastName" required>
+            </div>
+          </div>
+          <div class="form-group row align-items-center mb-3">
+            <label for="contactPhone" class="col-sm-4 col-form-label">Phone number</label>
+            <div class="col-sm-8">
+              <input type="tel" class="form-control custom-input" id="contactPhone" placeholder="+5 (555) 555-5555" required>
+            </div>
+          </div>
+          <div class="form-group row align-items-center mb-3">
+            <label for="contactWebsite" class="col-sm-4 col-form-label">Company website</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control custom-input" id="contactWebsite" placeholder="example.com" required>
+            </div>
+          </div>
+          <div class="form-group row align-items-center mb-3">
+            <label for="contactJobFunc" class="col-sm-4 col-form-label">Job function</label>
+            <div class="col-sm-8">
+              <select class="form-select custom-select" id="contactJobFunc" required>
+                <option value="" selected disabled>Select a job function</option>
+                <option value="engineering">Engineering</option>
+                <option value="product">Product</option>
+                <option value="sales">Sales</option>
+                <option value="executive">Executive</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row align-items-center mb-3">
+            <label for="contactJobLevel" class="col-sm-4 col-form-label">Job level</label>
+            <div class="col-sm-8">
+              <select class="form-select custom-select" id="contactJobLevel" required>
+                <option value="" selected disabled>Select a job level</option>
+                <option value="ic">Individual Contributor</option>
+                <option value="manager">Manager</option>
+                <option value="director">Director</option>
+                <option value="vp">VP/C-Level</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row mb-3">
+            <label for="contactVolume" class="col-sm-4 col-form-label">
+              Payments volume<br>
+              <span class="label-help">How much money does your business process online each month?</span>
+            </label>
+            <div class="col-sm-8">
+              <select class="form-select custom-select" id="contactVolume" required>
+                <option value="" selected disabled>Select a monthly amount...</option>
+                <option value="under100k">Under $100k</option>
+                <option value="100k-1m">$100k - $1M</option>
+                <option value="over1m">Over $1M</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row mb-3">
+            <label for="contactCrossBorder" class="col-sm-4 col-form-label">
+              Cross-border volume<br>
+              <span class="label-help">What percentage of your payment volume is from customers outside of India?</span>
+            </label>
+            <div class="col-sm-8">
+              <select class="form-select custom-select" id="contactCrossBorder" required>
+                <option value="" selected disabled>Select an amount...</option>
+                <option value="0-25">0% - 25%</option>
+                <option value="25-50">25% - 50%</option>
+                <option value="50-100">50% - 100%</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row mb-4">
+            <label for="contactAnythingElse" class="col-sm-4 col-form-label">
+              Anything else?<br>
+              <span class="label-help">Optional</span>
+            </label>
+            <div class="col-sm-8">
+              <textarea class="form-control custom-input" id="contactAnythingElse" rows="3" placeholder="Tell us more about your project, needs, and timeline"></textarea>
+            </div>
+          </div>
+
+          <div class="info-text mb-4 pb-2" style="border-bottom: 1px solid var(--stripe-border)">
+            <p>You may receive marketing communications from Stripe including product updates, industry news and events. You can <a href="#" style="color:#635bff; text-decoration:none;">unsubscribe</a> at any time.</p>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <a href="#" id="prevStep" style="color:var(--stripe-dark); font-weight:600; text-decoration:none; font-size:15px;">Back</a>
+            <button type="submit" class="btn-stripe-rounded">Submit <i class="bi bi-chevron-right" style="font-size: 11px;"></i></button>
+          </div>
+          
+          <div class="mt-4 pt-2">
+            <p style="font-size:12px; color:var(--stripe-text-light); margin:0;">Stripe will handle your data pursuant to its <a href="#" style="color:#635bff; text-decoration:none;">Privacy Policy</a></p>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

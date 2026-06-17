@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stripe</title>
+  <meta name="description"
+    content="Stripe powers online and in-person payment processing and financial solutions for businesses of all sizes.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css?v=2" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="stripe-nav navbar navbar-expand-lg" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="stripe.png" width="60" alt="stripe logo">
+      </a>
+      <button class="navbar-toggler-mobile" type="button" id="mobileMenuOpen">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item nav-item-mega"><a class="nav-link" href="payments.html">Products <i
+                class="bi bi-chevron-down" style="font-size:10px"></i></a>
+            <div class="mega-menu">
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Payments</h6>
+                  <a href="payments.html" class="mega-menu-link"><span class="icon purple"><i
+                        class="bi bi-credit-card"></i></span>
+                    <div><strong>Payments</strong><small>Online payments</small></div>
+                  </a>
+                  <a href="payments.html" class="mega-menu-link"><span class="icon cyan"><i
+                        class="bi bi-link-45deg"></i></span>
+                    <div><strong>Payment Links</strong><small>No-code payments</small></div>
+                  </a>
+                  <a href="payments.html" class="mega-menu-link"><span class="icon purple"><i
+                        class="bi bi-cart-check"></i></span>
+                    <div><strong>Checkout</strong><small>Prebuilt payment UIs</small></div>
+                  </a>
+                  <a href="payments.html" class="mega-menu-link"><span class="icon blue"><i
+                        class="bi bi-shield-check"></i></span>
+                    <div><strong>Radar</strong><small>Fraud prevention</small></div>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <h6>Revenue & Finance</h6>
+                  <a href="pricing.html" class="mega-menu-link"><span class="icon cyan"><i
+                        class="bi bi-receipt"></i></span>
+                    <div><strong>Billing</strong><small>Subscriptions & invoicing</small></div>
+                  </a>
+                  <a href="pricing.html" class="mega-menu-link"><span class="icon purple"><i
+                        class="bi bi-graph-up"></i></span>
+                    <div><strong>Revenue Recognition</strong><small>Accounting automation</small></div>
+                  </a>
+                  <a href="payments.html" class="mega-menu-link"><span class="icon blue"><i
+                        class="bi bi-globe"></i></span>
+                    <div><strong>Connect</strong><small>Payments for platforms</small></div>
+                  </a>
+                  <a href="pricing.html" class="mega-menu-link"><span class="icon cyan"><i
+                        class="bi bi-calculator"></i></span>
+                    <div><strong>Tax</strong><small>Sales tax & VAT automation</small></div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Solutions <i class="bi bi-chevron-down"
+                style="font-size:10px"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="developers.html">Developers <i class="bi bi-chevron-down"
+                style="font-size:10px"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Resources <i class="bi bi-chevron-down"
+                style="font-size:10px"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="signin.html" class="nav-cta-outline btn btn-sm">Sign in</a>
+          <a href="contact.html" class="nav-cta-filled btn btn-sm">Contact sales <i class="bi bi-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section-new" id="hero">
+    <!-- Hero background image placeholder -->
+    <div class="hero-image-area">
+      <!-- Replace src with your own hero image -->
+      <img src="images/hero-bg.png" alt="Colorful gradient swoosh" class="hero-bg-img"
+        onerror="this.style.display='none'">
+    </div>
+
+    <div class="container hero-new-container">
+      <div class="hero-new-content">
+        <h1 class="hero-new-heading">
+          Financial infrastructure to <span class="hero-gradient-word">grow</span> <span class="hero-gradient-word">your
+            revenue.</span>
+          <span class="hero-sub-text">Accept payments, offer financial services
+            and implement custom revenue models – from your first
+            transaction to your billionth.</span>
+        </h1>
+        <a href="contact.html" class="btn-hero-invite">Request an invite <i class="bi bi-chevron-right"></i></a>
+      </div>
+    </div>
+
+    <!-- Scrolling logo marquee -->
+    <div class="logo-marquee-wrapper">
+      <div class="logo-marquee">
+        <div class="logo-marquee-track">
+          <span class="marquee-logo">NVIDIA</span>
+          <span class="marquee-logo marquee-logo-img"><svg viewBox="0 0 120 40" height="22"><text x="10" y="30"
+                font-family="serif" font-style="italic" font-size="28" font-weight="700"
+                fill="#0A2540">Ford</text></svg></span>
+          <span class="marquee-logo">coinbase</span>
+          <span class="marquee-logo marquee-logo-google">G<span style="color:#EA4335">o</span><span
+              style="color:#FBBC04">o</span><span style="color:#4285F4">g</span><span
+              style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
+          <span class="marquee-logo"><i class="bi bi-bag-fill"
+              style="margin-right:4px;font-size:14px"></i>shopify</span>
+          <span class="marquee-logo">mindbody</span>
+          <span class="marquee-logo"><i class="bi bi-diamond-fill"
+              style="margin-right:4px;font-size:12px;color:#0A2540"></i>MetLife</span>
+          <span class="marquee-logo">ramp</span>
+          <span class="marquee-logo">amazon</span>
+          <span class="marquee-logo">Instacart</span>
+          <span class="marquee-logo">Zoom</span>
+          <span class="marquee-logo">Atlassian</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="marquee-logo">NVIDIA</span>
+          <span class="marquee-logo marquee-logo-img"><svg viewBox="0 0 120 40" height="22"><text x="10" y="30"
+                font-family="serif" font-style="italic" font-size="28" font-weight="700"
+                fill="#0A2540">Ford</text></svg></span>
+          <span class="marquee-logo">coinbase</span>
+          <span class="marquee-logo marquee-logo-google">G<span style="color:#EA4335">o</span><span
+              style="color:#FBBC04">o</span><span style="color:#4285F4">g</span><span
+              style="color:#34A853">l</span><span style="color:#EA4335">e</span></span>
+          <span class="marquee-logo"><i class="bi bi-bag-fill"
+              style="margin-right:4px;font-size:14px"></i>shopify</span>
+          <span class="marquee-logo">mindbody</span>
+          <span class="marquee-logo"><i class="bi bi-diamond-fill"
+              style="margin-right:4px;font-size:12px;color:#0A2540"></i>MetLife</span>
+          <span class="marquee-logo">ramp</span>
+          <span class="marquee-logo">amazon</span>
+          <span class="marquee-logo">Instacart</span>
+          <span class="marquee-logo">Zoom</span>
+          <span class="marquee-logo">Atlassian</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-3 fade-up">
+          <div class="stat-card">
+            <div class="stat-number" data-target="135" data-suffix="+">0</div>
+            <div class="stat-label">Currencies & payment methods</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 fade-up">
+          <div class="stat-card">
+            <div class="stat-number" data-target="1.9" data-prefix="$" data-suffix="tn" data-decimals="1">0</div>
+            <div class="stat-label">Payment volume in 2025</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 fade-up">
+          <div class="stat-card">
+            <div class="stat-number" data-target="99.999" data-suffix="%" data-decimals="3">0</div>
+            <div class="stat-label">Historical uptime</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 fade-up">
+          <div class="stat-card">
+            <div class="stat-number" data-target="200" data-suffix="M+">0</div>
+            <div class="stat-label">Active subscriptions managed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPANDABLE PRODUCT BENTO GRID -->
+  <section class="product-bento-section" id="productBento">
+    <div class="container">
+      <div class="section-intro fade-up">
+        <span class="section-tag">Flexible solutions for every business model</span>
+        <h2>Grow your business with a comprehensive set of payments and financial tools</h2>
+        <p>Designed to work individually or together.</p>
+      </div>
+
+      <!-- Row 1: 2/3 + 1/3 -->
+      <div class="bento-grid fade-up">
+        <!-- Card 1: Payments (Large) -->
+        <div class="product-bento-item" data-modal="payments">
+          <div class="bento-header">
+            <div class="bento-title">Accept and optimise payments globally – online and in person</div>
+            <button class="bento-expand-btn" aria-label="Expand"><i class="bi bi-arrows-fullscreen"></i></button>
+          </div>
+          <div class="bento-visual"
+            style="margin-top:auto; display:flex; justify-content:center; align-items:flex-end;">
+            <img src="bento-payments.png" class="bento-img" alt="Payments">
+          </div>
+        </div>
+
+        <!-- Card 2: Billing (Small) -->
+        <div class="product-bento-item" data-modal="billing">
+          <div class="bento-header">
+            <div class="bento-title">Enable any billing model</div>
+            <button class="bento-expand-btn" aria-label="Expand"><i class="bi bi-arrows-fullscreen"></i></button>
+          </div>
+          <div class="bento-visual"
+            style="margin-top:auto; display:flex; justify-content:center; align-items:flex-end;">
+            <img src="bento-billing.png" class="bento-img" alt="Billing">
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: 3 equal cards -->
+      <div class="bento-grid-row2 fade-up">
+        <!-- Card 3: Agentic Commerce -->
+        <div class="product-bento-item" data-modal="agentic">
+          <div class="bento-header">
+            <div class="bento-title">Monetise through agentic commerce</div>
+            <button class="bento-expand-btn" aria-label="Expand"><i class="bi bi-arrows-fullscreen"></i></button>
+          </div>
+          <div class="bento-visual"
+            style="margin-top:auto; display:flex; justify-content:center; align-items:flex-end;">
+            <img src="bento-agentic.png" class="bento-img" alt="Agentic Commerce">
+          </div>
+        </div>
+
+        <!-- Card 4: Card Issuing -->
+        <div class="product-bento-item" data-modal="issuing">
+          <div class="bento-header">
+            <div class="bento-title">Create a card issuing programme</div>
+            <button class="bento-expand-btn" aria-label="Expand"><i class="bi bi-arrows-fullscreen"></i></button>
+          </div>
+          <div class="bento-visual"
+            style="margin-top:auto; display:flex; justify-content:center; align-items:flex-end;">
+            <img src="bento-issuing.png" class="bento-img" alt="Card Issuing">
+          </div>
+        </div>
+
+        <!-- Card 5: Crypto / Stablecoins -->
+        <div class="product-bento-item" data-modal="crypto">
+          <div class="bento-header">
+            <div class="bento-title">Access borderless money movement with stablecoins and crypto</div>
+            <button class="bento-expand-btn" aria-label="Expand"><i class="bi bi-arrows-fullscreen"></i></button>
+          </div>
+          <div class="bento-visual"
+            style="margin-top:auto; display:flex; justify-content:center; align-items:flex-end;">
+            <img src="bento-crypto.png" class="bento-img" alt="Crypto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT MODAL OVERLAY -->
+  <div class="product-modal-overlay" id="productModal">
+    <div class="product-modal">
+      <button class="product-modal-close" id="modalClose"><i class="bi bi-x-lg"></i></button>
+      <div class="product-modal-top">
+        <div>
+          <h3 class="product-modal-title" id="modalTitle"></h3>
+          <p class="product-modal-desc" id="modalDesc"></p>
+          <div class="product-modal-actions" id="modalActions"></div>
+        </div>
+        <div>
+          <ul class="product-modal-features" id="modalFeatures"></ul>
+        </div>
+      </div>
+      <div class="product-modal-visuals" id="modalVisuals"></div>
+    </div>
+  </div>
+
+  <!-- ENTERPRISE -->
+  <section class="section-padding" id="enterprise">
+    <div class="container">
+      <div class="text-center mb-5 fade-up">
+        <span class="section-tag">Powering businesses of all sizes</span>
+        <h2 class="section-title">Run your business on a reliable platform</h2>
+        <p class="section-subtitle mx-auto">From ambitious startups to the Fortune 100, companies trust Stripe's suite
+          of products to power their financial operations.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 fade-up">
+          <div class="bento-card">
+            <div class="card-icon" style="background:rgba(99,91,255,0.1);color:var(--stripe-primary)"><i
+                class="bi bi-building"></i></div>
+            <h4>Enterprise-grade</h4>
+            <p>50% of Fortune 100 companies use Stripe to grow their businesses — from expanding internationally to
+              reimagining customer experience.</p>
+            <a href="payments.html" class="d-inline-flex align-items-center gap-1 mt-3"
+              style="font-weight:600;font-size:14px">Learn more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 fade-up">
+          <div class="bento-card">
+            <div class="card-icon" style="background:rgba(0,212,170,0.1);color:var(--stripe-cyan)"><i
+                class="bi bi-rocket-takeoff"></i></div>
+            <h4>Built for startups</h4>
+            <p>78% of the Forbes AI 50 and leading stablecoin pioneers build on Stripe's easy-to-integrate financial
+              infrastructure.</p>
+            <a href="signup.html" class="d-inline-flex align-items-center gap-1 mt-3"
+              style="font-weight:600;font-size:14px">Get started <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 fade-up">
+          <div class="bento-card">
+            <div class="card-icon" style="background:rgba(128,233,255,0.1);color:#0EA5E9"><i
+                class="bi bi-diagram-3"></i></div>
+            <h4>Platform ready</h4>
+            <p>From the Fortune 100 to the Forbes Cloud 100, SaaS platforms use Stripe to expand with embedded payments
+              and financial services.</p>
+            <a href="payments.html" class="d-inline-flex align-items-center gap-1 mt-3"
+              style="font-weight:600;font-size:14px">Explore Connect <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS OVERVIEW -->
+  <section class="section-padding section-dark" id="products">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-5 fade-up">
+          <span class="section-tag" style="color:var(--stripe-cyan)">Products</span>
+          <h2 class="section-title">A fully integrated suite of payments products</h2>
+          <p style="color:rgba(255,255,255,0.6)">Stripe's products power payments for online and in-person retailers,
+            subscriptions businesses, software platforms & marketplaces.</p>
+          <a href="payments.html" class="btn-stripe mt-3">Explore all products</a>
+        </div>
+        <div class="col-lg-7">
+          <div class="row g-3">
+            <div class="col-sm-6 fade-up">
+              <div class="bento-card-dark"><i class="bi bi-credit-card-2-front fs-3 mb-3"
+                  style="color:var(--stripe-primary)"></i>
+                <h4>Payments</h4>
+                <p>Accept payments online, in person, or through your platform.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 fade-up">
+              <div class="bento-card-dark"><i class="bi bi-receipt-cutoff fs-3 mb-3"
+                  style="color:var(--stripe-cyan)"></i>
+                <h4>Billing</h4>
+                <p>Build and scale your recurring business model.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 fade-up">
+              <div class="bento-card-dark"><i class="bi bi-people fs-3 mb-3" style="color:#80E9FF"></i>
+                <h4>Connect</h4>
+                <p>Set up multi-party payments and payouts for platforms.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 fade-up">
+              <div class="bento-card-dark"><i class="bi bi-shield-lock fs-3 mb-3" style="color:#FFC233"></i>
+                <h4>Radar</h4>
+                <p>Fight fraud with machine learning powered detection.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVELOPER SECTION -->
+  <section class="section-padding" id="developers">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 fade-up">
+          <span class="section-tag">Designed for developers</span>
+          <h2 class="section-title">The world's most powerful and easy-to-use APIs</h2>
+          <p class="section-subtitle">We agonize over the right abstractions so your teams don't need to stitch together
+            disparate systems or spend months integrating payments functionality.</p>
+
+          <div class="d-flex flex-column gap-4 mt-5 mb-4">
+            <div class="d-flex gap-3">
+              <div class="icon-circle" style="flex-shrink:0; width:40px;height:40px;font-size:18px"><i
+                  class="bi bi-code-slash"></i></div>
+              <div>
+                <h5 style="font-size:1rem;margin-bottom:6px;font-weight:600">Tools for every stack</h5>
+                <p style="font-size:14px;color:var(--stripe-text);margin:0;line-height:1.6">We offer client and
+                  server-side libraries in everything from React and PHP to .NET and iOS.</p>
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="icon-circle"
+                style="flex-shrink:0; background:rgba(0,212,170,0.1);color:var(--stripe-cyan); width:40px;height:40px;font-size:18px">
+                <i class="bi bi-puzzle"></i>
+              </div>
+              <div>
+                <h5 style="font-size:1rem;margin-bottom:6px;font-weight:600">Prebuilt integrations</h5>
+                <p style="font-size:14px;color:var(--stripe-text);margin:0;line-height:1.6">Use integrations for systems
+                  like Shopify, WooCommerce, NetSuite, and more.</p>
+              </div>
+            </div>
+          </div>
+          <a href="developers.html" class="d-inline-flex align-items-center gap-1 mt-2"
+            style="font-weight:600;font-size:15px;color:var(--stripe-primary)">Explore the docs <i
+              class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="col-lg-7 fade-up">
+          <div class="code-window"
+            style="background:#0e151e; border-radius:12px; box-shadow:0 30px 60px rgba(0,0,0,0.25); overflow:hidden">
+            <ul class="nav nav-tabs code-tabs mb-0" role="tablist"
+              style="border-bottom:none; padding: 12px 16px 0; display: flex; align-items: flex-end;">
+              <li class="nav-item" style="margin-right:auto; align-self:center; padding-bottom: 12px;">
+                <div style="display:flex; gap:8px">
+                  <div style="width:12px; height:12px; border-radius:50%; background:#ff5f56;"></div>
+                  <div style="width:12px; height:12px; border-radius:50%; background:#ffbd2e;"></div>
+                  <div style="width:12px; height:12px; border-radius:50%; background:#27c93f;"></div>
+                </div>
+              </li>
+              <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#dev-node"
+                  style="border-radius:8px 8px 0 0 !important; font-family:'SF Mono','Fira Code',monospace; font-size:12px;">Node.js</button>
+              </li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#dev-python"
+                  style="border-radius:8px 8px 0 0 !important; font-family:'SF Mono','Fira Code',monospace; font-size:12px;">Python</button>
+              </li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#dev-ruby"
+                  style="border-radius:8px 8px 0 0 !important; font-family:'SF Mono','Fira Code',monospace; font-size:12px;">Ruby</button>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="dev-node">
+                <div class="code-block"
+                  style="border-radius:0; border:none; box-shadow:none; padding:32px; min-height: 250px;">
+                  <div class="mb-1"><span class="comment" style="color: #6B7C93;">// Create a payment intent with the
+                      Stripe API</span></div>
+                  <div><span class="keyword">const</span> stripe = <span class="function">require</span>(<span
+                      class="string">'stripe'</span>)(<span class="string">'sk_test_...'</span>);</div>
+                  <div>&nbsp;</div>
+                  <div><span class="keyword">const</span> paymentIntent = <span class="keyword">await</span>
+                    stripe.paymentIntents.<span class="function">create</span>({</div>
+                  <div>&nbsp;&nbsp;amount: <span class="number">2000</span>,</div>
+                  <div>&nbsp;&nbsp;currency: <span class="string">'usd'</span>,</div>
+                  <div>&nbsp;&nbsp;payment_method_types: [<span class="string">'card'</span>],</div>
+                  <div>});</div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="dev-python">
+                <div class="code-block"
+                  style="border-radius:0; border:none; box-shadow:none; padding:32px; min-height: 250px;">
+                  <div class="mb-1"><span class="comment" style="color: #6B7C93;"># Create a payment intent with the
+                      Stripe API</span></div>
+                  <div><span class="keyword">import</span> stripe</div>
+                  <div>stripe.api_key = <span class="string">"sk_test_..."</span></div>
+                  <div>&nbsp;</div>
+                  <div>payment_intent = stripe.PaymentIntent.<span class="function">create</span>(</div>
+                  <div>&nbsp;&nbsp;amount=<span class="number">2000</span>,</div>
+                  <div>&nbsp;&nbsp;currency=<span class="string">"usd"</span>,</div>
+                  <div>&nbsp;&nbsp;payment_method_types=[<span class="string">"card"</span>],</div>
+                  <div>)</div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="dev-ruby">
+                <div class="code-block"
+                  style="border-radius:0; border:none; box-shadow:none; padding:32px; min-height: 250px;">
+                  <div class="mb-1"><span class="comment" style="color: #6B7C93;"># Create a payment intent with the
+                      Stripe API</span></div>
+                  <div><span class="keyword">require</span> <span class="string">'stripe'</span></div>
+                  <div>Stripe.api_key = <span class="string">'sk_test_...'</span></div>
+                  <div>&nbsp;</div>
+                  <div>payment_intent = Stripe::PaymentIntent.<span class="function">create</span>(</div>
+                  <div>&nbsp;&nbsp;amount: <span class="number">2000</span>,</div>
+                  <div>&nbsp;&nbsp;currency: <span class="string">'usd'</span>,</div>
+                  <div>&nbsp;&nbsp;payment_method_types: [<span class="string">'card'</span>],</div>
+                  <div>)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER STORIES -->
+  <section class="customer-stories-section section-padding" id="customers">
+    <div class="container">
+      <div class="row mb-5 fade-up">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2
+            style="font-size: 2.25rem; font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; color: #0a2540; margin-bottom: 24px; max-width: 480px;">
+            Build a foundation for your startup that enables faster growth</h2>
+          <a href="#"
+            style="background: #7928ca; border: none; border-radius: 4px; font-weight: 600; padding: 10px 20px; color: white; display: inline-flex; align-items: center; text-decoration: none; font-size: 15px;">Stripe
+            for startups <i class="bi bi-chevron-right"
+              style="font-size: 12px; margin-left: 6px; font-weight: 800;"></i></a>
+        </div>
+        <div class="col-lg-6 d-flex flex-column">
+          <p
+            style="color: #425466; font-size: 1.1rem; line-height: 1.5; margin-bottom: 32px; max-width: 500px; padding-top: 6px;">
+            From stablecoin pioneers to 78% of the Forbes AI 50, Stripe helps startups build what's next on
+            easy-to-integrate financial infrastructure.</p>
+          <div class="carousel-controls d-flex gap-2 justify-content-end mt-auto">
+            <button class="btn carousel-prev"
+              style="width: 36px; height: 36px; padding: 0; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid #e6ebf1; border-radius: 4px; color: #425466;"><i
+                class="bi bi-arrow-left"></i></button>
+            <button class="btn carousel-next"
+              style="width: 36px; height: 36px; padding: 0; display: flex; align-items: center; justify-content: center; background: #f2ebff; border: 1px solid transparent; border-radius: 4px; color: #7928ca;"><i
+                class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="stories-carousel fade-up">
+
+        <!-- Lovable -->
+        <div class="story-card">
+          <div class="story-image"
+            style="background-image: url('lovable.png'); background-size: cover; background-position: center;">
+          </div>
+          <div class="story-content">
+            <p>Lovable grows into a vibe-coding juggernaut with Stripe.</p>
+            <a href="#">Read Lovable's story <i class="bi bi-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Runway -->
+        <div class="story-card">
+          <div class="story-image"
+            style="background-image: url('runway.png'); background-size: cover; background-position: center;">
+          </div>
+          <div class="story-content">
+            <p>Runway protects developer time with no-code solutions from Stripe.</p>
+            <a href="#">Read Runway's story <i class="bi bi-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Supabase -->
+        <div class="story-card">
+          <div class="story-image"
+            style="background-image: url('supabase.png'); background-size: cover; background-position: center;">
+          </div>
+          <div class="story-content">
+            <p>Supabase delivers its backend-as-a-service to 150 countries with Stripe.</p>
+            <a href="#">Read Supabase's story <i class="bi bi-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Linear -->
+        <div class="story-card">
+          <div class="story-image"
+            style="background-image: url('linear.png'); background-size: cover; background-position: center;">
+          </div>
+          <div class="story-content">
+            <p>Linear partners with Stripe to handle billing and payments.</p>
+            <a href="#">Read Linear's story <i class="bi bi-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ElevenLabs -->
+        <div class="story-card">
+          <div class="story-image"
+            style="background-image: url('elevenlabs.png'); background-size: cover; background-position: center;">
+          </div>
+          <div class="story-content">
+            <p>ElevenLabs grows into a US$3bn AI audio leader with Stripe.</p>
+            <a href="#">Watch the video <i class="bi bi-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Browserbase -->
+        <div class="story-card">
+          <div class="story-image"
+            style="background-image: url('browserbase.png'); background-size: cover; background-position: center;">
+          </div>
+          <div class="story-content">
+            <p>Browserbase offers usage-based billing for an AI agent browser with Stripe.</p>
+            <a href="#">Read Browserbase's story <i class="bi bi-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Decagon -->
+        <div class="story-card">
+          <div class="story-image"
+            style="background-image: url('decagon.png'); background-size: cover; background-position: center;">
+          </div>
+          <div class="story-content">
+            <p>Decagon decreases support costs by 65% with Stripe-integrated agents.</p>
+            <a href="#">Read Decagon's story <i class="bi bi-chevron-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section-padding section-dark" id="cta" style="text-align:center">
+    <div class="container fade-up">
+      <h2 class="section-title" style="color:#fff;max-width:600px;margin:0 auto 16px">Ready to get started?</h2>
+      <p style="color:rgba(255,255,255,0.6);max-width:500px;margin:0 auto 32px">Create an account instantly and start
+        accepting payments. Contact us for a custom package.</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="signup.html" class="btn-stripe">Start now <i class="bi bi-arrow-right"></i></a>
+        <a href="contact.html" class="btn-stripe-outline">Contact sales</a>
+      </div>
+      <div class="row g-4 mt-5">
+        <div class="col-md-6">
+          <div class="bento-card-dark text-start"><i class="bi bi-tag fs-4 mb-2" style="color:var(--stripe-cyan)"></i>
+            <h4>See what you'll pay</h4>
+            <p>Integrated per-transaction pricing with no hidden fees.</p><a href="pricing.html"
+              style="color:var(--stripe-cyan);font-weight:600;font-size:14px">Pricing details <i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="bento-card-dark text-start"><i class="bi bi-lightning-charge fs-4 mb-2"
+              style="color:var(--stripe-primary)"></i>
+            <h4>Start building</h4>
+            <p>Get up and running with Stripe in as little as 10 minutes.</p><a href="developers.html"
+              style="color:var(--stripe-primary);font-weight:600;font-size:14px">Integration options <i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="stripe-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-lg-2">
+          <h6>Products</h6>
+          <ul class="footer-links">
+            <li><a href="payments.html">Payments</a></li>
+            <li><a href="payments.html">Checkout</a></li>
+            <li><a href="payments.html">Connect</a></li>
+            <li><a href="pricing.html">Billing</a></li>
+            <li><a href="payments.html">Radar</a></li>
+            <li><a href="payments.html">Terminal</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Solutions</h6>
+          <ul class="footer-links">
+            <li><a href="#">Enterprises</a></li>
+            <li><a href="#">Startups</a></li>
+            <li><a href="#">SaaS</a></li>
+            <li><a href="#">E-commerce</a></li>
+            <li><a href="#">Marketplaces</a></li>
+            <li><a href="#">Platforms</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Developers</h6>
+          <ul class="footer-links">
+            <li><a href="developers.html">Documentation</a></li>
+            <li><a href="developers.html">API Reference</a></li>
+            <li><a href="developers.html">API Status</a></li>
+            <li><a href="developers.html">Libraries & SDKs</a></li>
+            <li><a href="developers.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Resources</h6>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Customer Stories</a></li>
+            <li><a href="#">Guides</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Company</h6>
+          <ul class="footer-links">
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="contact.html">Contact Sales</a></li>
+            <li><a href="#">Partners</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6>Pricing</h6>
+          <ul class="footer-links">
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="signin.html">Sign in</a></li>
+            <li><a href="signup.html">Start now</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Stripe, Inc. All rights reserved.</p>
+        <div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-success"><i class="bi bi-check-circle-fill" style="color:var(--stripe-cyan)"></i><span
+      class="toast-msg"></span></div>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a class="navbar-brand" href="index.html">
+        <h3 class="fw-bold mb-0" style="color: var(--stripe-dark); letter-spacing: -1px;">stripe</h3>
+      </a>
+      <button class="mobile-close-btn" id="mobileCloseBtn">
+        <i class="bi bi-x"></i>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <a href="#" class="mobile-menu-item" data-bs-toggle="collapse" data-bs-target="#mobileProducts">Products <i class="bi bi-chevron-down"></i></a>
+    <div class="collapse" id="mobileProducts">
+      <div class="mobile-submenu">
+        <a href="payments.html">Payments</a>
+        <a href="payments.html">Payment Links</a>
+        <a href="payments.html">Checkout</a>
+        <a href="payments.html">Radar</a>
+        <a href="pricing.html">Billing</a>
+        <a href="payments.html">Connect</a>
+      </div>
+    </div>
+      <a href="#" class="mobile-menu-item">Solutions <i class="bi bi-chevron-right"></i></a>
+      <a href="developers.html" class="mobile-menu-item">Developers <i class="bi bi-chevron-right"></i></a>
+      <a href="#" class="mobile-menu-item">Resources <i class="bi bi-chevron-right"></i></a>
+      <a href="pricing.html" class="mobile-menu-item">Pricing <i class="bi bi-chevron-right"></i></a>
+      <a href="signin.html" class="mobile-menu-item">Sign in</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <a href="signup.html" class="mobile-btn-primary">Start now <i class="bi bi-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-btn-outline">Contact sales</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
